@@ -9,5 +9,5 @@
 ## :hammer: Funcionalidades do projeto
 
 - `Funcionalidade 1`: Cadastro de convidados: presentes e ausentes
-
+- `Funcionalidade 2`: Cadastro: banco de dados
 
