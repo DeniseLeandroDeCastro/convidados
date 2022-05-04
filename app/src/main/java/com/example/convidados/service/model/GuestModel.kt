@@ -1,4 +1,4 @@
 package com.example.convidados.service.model
 
-class GuestModel(var name: String, var presence: Boolean) {
+class GuestModel(val id: Int, var name: String, var presence: Boolean) {
 }
