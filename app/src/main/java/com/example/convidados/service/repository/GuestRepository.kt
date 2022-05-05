@@ -1,7 +1,9 @@
 package com.example.convidados.service.repository
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.text.Selection
 import com.example.convidados.service.constants.DataBaseConstants
 import com.example.convidados.service.model.GuestModel
 
@@ -17,6 +19,40 @@ class GuestRepository private constructor(context: Context) {
                 repository = GuestRepository(context)
             }
             return repository
+        }
+    }
+    //Carrega o usuário
+    @SuppressLint("Range")
+    fun get(id: Int) : GuestModel?  {
+        var guest: GuestModel? = null
+        return try {
+            val db = mGuestDataBaseHelper.readableDatabase
+            val projection = arrayOf(DataBaseConstants.GUEST.COLUMNS.NAME,
+                DataBaseConstants.GUEST.COLUMNS.PRESENCE)
+
+            val selection = DataBaseConstants.GUEST.COLUMNS.ID + " = ?"
+            val args = arrayOf(id.toString())
+
+            val cursor = db.query(
+                DataBaseConstants.GUEST.TABLE_NAME,
+                projection,
+                selection,
+                args,
+                null,
+                null,
+                null
+            )
+            if (cursor != null && cursor.count > 0) {
+                cursor.moveToFirst()
+                val name = cursor.getString(cursor.getColumnIndex(DataBaseConstants.GUEST.COLUMNS.NAME))
+                val presence = (cursor.getInt(cursor.getColumnIndex(DataBaseConstants.GUEST.COLUMNS.PRESENCE)) == 1)
+
+                guest = GuestModel(id, name, presence)
+            }
+            cursor?.close()
+            guest
+        } catch (e: Exception) {
+            guest
         }
     }
 
@@ -66,7 +102,17 @@ class GuestRepository private constructor(context: Context) {
         }
     }
 
-    fun delete(guest: GuestModel) {
+    fun delete(id: Int) : Boolean{
+        return try {
+            val db = mGuestDataBaseHelper.writableDatabase
 
+            val selection = DataBaseConstants.GUEST.COLUMNS.ID + " = ?"
+            val args = arrayOf(id.toString())
+
+            db.delete(DataBaseConstants.GUEST.TABLE_NAME, selection, args)
+            true
+        } catch (e: Exception) {
+            false
+        }
     }
 }
