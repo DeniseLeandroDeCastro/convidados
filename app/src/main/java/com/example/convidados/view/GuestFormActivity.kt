@@ -30,6 +30,7 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
 
             val name = edit_name.text.toString()
             val presence = radio_presence.isChecked
+
             mViewModel.save(name, presence)
 
         }
@@ -42,6 +43,7 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
             } else {
                 Toast.makeText(applicationContext, "Falha", Toast.LENGTH_SHORT).show()
             }
+            finish()
         })
     }
 

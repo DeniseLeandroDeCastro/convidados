@@ -59,6 +59,7 @@ class GuestRepository private constructor(context: Context) {
     fun save(guest: GuestModel) : Boolean{
         return try {
             val db = mGuestDataBaseHelper.writableDatabase
+
             val contentValues = ContentValues()
             contentValues.put(DataBaseConstants.GUEST.COLUMNS.NAME, guest.name)
             contentValues.put(DataBaseConstants.GUEST.COLUMNS.PRESENCE, guest.presence)
