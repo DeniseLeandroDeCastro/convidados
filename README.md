@@ -3,7 +3,7 @@
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p> 
 <div align="middle">
-<img src="https://user-images.githubusercontent.com/29150094/166585007-90e0003b-7968-41ed-b47d-e4ad652cdf5e.gif" width="250" height="450" /> 
+<img src="https://user-images.githubusercontent.com/29150094/167425877-dd6961e2-e9cb-4044-9f28-18fed1babec5.gif" width="250" height="450" /> 
 </div> </br>
   
 ## :hammer: Funcionalidades do projeto
@@ -13,3 +13,4 @@
 - `Funcionalidade 3`: Inserir convidado
 - `Funcionalidade 4`: Alterar convidado
 - `Funcionalidade 5`: Deletar convidado
+
