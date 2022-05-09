@@ -13,4 +13,5 @@
     <string name="text_name">Nome</string>
     <string name="text_confirmation">Confirmação</string>
     <string name="button_save">Salvar</string>
+    <string name="text_convidado">CONVIDADO</string>
 </resources>
