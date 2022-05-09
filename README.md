@@ -10,4 +10,6 @@
 
 - `Funcionalidade 1`: Cadastro de convidados: presentes e ausentes
 - `Funcionalidade 2`: Cadastro: banco de dados
-
+- `Funcionalidade 3`: Inserir convidado
+- `Funcionalidade 4`: Alterar convidado
+- `Funcionalidade 5`: Deletar convidado
