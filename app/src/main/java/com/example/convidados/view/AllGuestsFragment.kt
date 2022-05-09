@@ -37,7 +37,7 @@ class AllGuestsFragment : Fragment() {
         //Definir um adapter
         recycler.adapter = mAdapter
 
-        mListener = object: GuestListener{
+        mListener = object: GuestListener {
             override fun onClick(id: Int) {
                 val intent = Intent(context, GuestFormActivity::class.java)
                 val bundle = Bundle()
@@ -48,7 +48,7 @@ class AllGuestsFragment : Fragment() {
         }
 
         mAdapter.attachListener(mListener)
-        observer()
+        observe()
 
         return root
     }
@@ -58,7 +58,7 @@ class AllGuestsFragment : Fragment() {
         allGuestsViewModel.load()
     }
 
-    private fun observer() {
+    private fun observe() {
         allGuestsViewModel.guestList.observe(viewLifecycleOwner, Observer {
             mAdapter.updateGuests(it)
         })

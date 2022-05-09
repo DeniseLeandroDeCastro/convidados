@@ -7,7 +7,9 @@ import com.example.convidados.R
 import com.example.convidados.service.model.GuestModel
 import com.example.convidados.view.listener.GuestListener
 
-class GuestViewHolder(itemView: View, private val listener: GuestListener) : RecyclerView.ViewHolder(itemView) {
+class GuestViewHolder(
+    itemView: View, private val listener: GuestListener
+) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(guest: GuestModel) {
         //Obtém os elementos da interface
