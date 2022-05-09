@@ -275,7 +275,6 @@ class GuestRepository private constructor(context: Context) {
             val args = arrayOf(id.toString())
 
             db.delete(DataBaseConstants.GUEST.TABLE_NAME, selection, args)
-
             true
         } catch (e: Exception) {
             false

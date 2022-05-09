@@ -22,7 +22,7 @@
         android:id="@+id/text_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_name"
+        android:text="@string/nome"
         app:layout_constraintTop_toBottomOf="@+id/img_convidado"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -41,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/text_confirmation"
+        android:text="@string/confirmacao"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_name"/>
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/button_save"
+        android:text="@string/salvar"
         app:layout_constraintTop_toBottomOf="@id/rg_confirmation"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
