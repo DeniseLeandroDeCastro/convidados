@@ -1,4 +1,6 @@
-<h1 align="center"> App Convidados </h1>
+<h1 align="center"> 
+  <img src="https://user-images.githubusercontent.com/29150094/168430155-d56d8a7c-fdb7-46de-9ee8-004ce1170072.png" width="200" height="80" />  
+</h1>
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p> 
@@ -13,4 +15,5 @@
 - `Funcionalidade 3`: Inserir convidado
 - `Funcionalidade 4`: Alterar convidado
 - `Funcionalidade 5`: Deletar convidado
+
 
